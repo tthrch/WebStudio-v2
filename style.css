@@ -202,21 +202,55 @@ img {
     gap: 30px;
 }
 
+/* === КАРТКА === */
 .work-item {
     position: relative;
     overflow: hidden;
     height: 294px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* === ФОТО === */
 .work-item img {
+    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s ease;
 }
 
-.work-item:hover img {
-    transform: scale(1.05);
+/* === OVERLAY === */
+.work-overlay {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 35%;
+    background: rgba(0, 0, 0, 0.6);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+}
+
+/* === HOVER === */
+.work-item:hover .work-overlay {
+    transform: translateY(0);
+}
+
+.work-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* === ТЕКСТ === */
+.work-overlay span {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
 .team-section {
