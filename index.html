@@ -33,7 +33,69 @@
     </header>
 
     <main>
-      <section class="hero"></section>
+      <section class="hero">
+        <h1 class="hero-title">
+          Ефективні рішення для <br />
+          вашого бізнесу
+        </h1>
+        <button class="hero-btn" data-modal-open>Замовити послугу</button>
+        <div class="backdrop is-hidden" data-modal>
+          <div class="modal">
+            <div class="modal-header">
+              <h2>Залиште свої дані, ми вам передзвонимо</h2>
+              <button class="btn-close" data-modal-close>&times;</button>
+            </div>
+
+            <form class="order-form">
+              <label class="form-field">
+                <span>Ім'я</span>
+                <input type="text" class="input" placeholder="ваше ім'я" />
+              </label>
+
+              <label class="form-field">
+                <span>Телефон</span>
+                <input
+                  type="tel"
+                  class="input"
+                  placeholder="+380xxxxxxxxxx"
+                  pattern="\+380\d{9}"
+                  maxlength="13"
+                  required
+                />
+              </label>
+
+              <label class="form-field">
+                <span>Пошта</span>
+                <input
+                  type="email"
+                  class="input"
+                  name="email"
+                  placeholder="example@email.com"
+                />
+              </label>
+
+              <label class="form-field">
+                <span>Коментар</span>
+                <textarea
+                  class="input"
+                  name="comment"
+                  placeholder="Ваш коментар..."
+                  rows="4"
+                ></textarea>
+              </label>
+
+              <label class="checkbox-field">
+                <input type="checkbox" />
+                <span
+                  >Погоджуюся з розсилкою та приймаю
+                  <a href="#">Умови договору</a></span
+                >
+              </label>
+              <button type="submit" class="submit-btn">Відправити</button>
+            </form>
+          </div>
+        </div>
+      </section>
 
       <section class="section">
         <div class="container">
@@ -252,52 +314,63 @@
           </ul>
         </div>
       </section>
+    </main>
 
-      <footer class="footer">
-        <div class="container footer-container">
-          <div class="footer-address-side">
-            <a href="index.html" class="logo logo-footer"
-              ><span class="accent">Web</span>Studio</a
-            >
-            <address class="address">
-              <ul class="address-list">
-                <li>
-                  <span class="white-text"
-                    >м. Київ, пр-т Лесі Українки, 26</span
-                  >
-                </li>
-                <li>
-                  <a href="mailto:info@devstudio.com" class="footer-link"
-                    >info@devstudio.com</a
-                  >
-                </li>
-                <li>
-                  <a href="tel:+380961111111" class="footer-link"
-                    >+38 096 111 11 11</a
-                  >
-                </li>
-              </ul>
-            </address>
-          </div>
-          <div class="footer-socials">
-            <p class="footer-title">Приєднуйтесь</p>
-            <div class="social-links">
-              <a href="#" class="footer-social-icon ig"
-                ><img src="./images/instagram.png" alt="instagram"
-              /></a>
-              <a href="#" class="footer-social-icon tw"
-                ><img src="./images/twitter.png" alt="twitter"
-              /></a>
-              <a href="#" class="footer-social-icon fb"
-                ><img src="./images/facebook.png" alt="facebook"
-              /></a>
-              <a href="#" class="footer-social-icon in"
-                ><img src="./images/in.png" alt="in"
-              /></a>
-            </div>
+    <footer class="footer">
+      <div class="container footer-container">
+        <div class="footer-address-side">
+          <a href="index.html" class="logo logo-footer"
+            ><span class="accent">Web</span>Studio</a
+          >
+          <address class="address">
+            <ul class="address-list">
+              <li>
+                <span class="white-text">м. Київ, пр-т Лесі Українки, 26</span>
+              </li>
+              <li>
+                <a href="mailto:info@devstudio.com" class="footer-link"
+                  >info@devstudio.com</a
+                >
+              </li>
+              <li>
+                <a href="tel:+380961111111" class="footer-link"
+                  >+38 096 111 11 11</a
+                >
+              </li>
+            </ul>
+          </address>
+        </div>
+        <div class="footer-socials">
+          <p class="footer-title">Приєднуйтесь</p>
+          <div class="social-links">
+            <a href="#" class="footer-social-icon ig"
+              ><img src="./images/instagram.png" alt="instagram"
+            /></a>
+            <a href="#" class="footer-social-icon tw"
+              ><img src="./images/twitter.png" alt="twitter"
+            /></a>
+            <a href="#" class="footer-social-icon fb"
+              ><img src="./images/facebook.png" alt="facebook"
+            /></a>
+            <a href="#" class="footer-social-icon in"
+              ><img src="./images/in.png" alt="in"
+            /></a>
           </div>
         </div>
-      </footer>
-    </main>
+      </div>
+      <div class="footer-subscribe">
+        <p class="footer-title">Підпишіться на розсилку</p>
+        <form class="subscribe-form">
+          <input
+            type="email"
+            name="email"
+            placeholder="E-mail"
+            class="subscribe-input"
+          />
+          <button type="submit" class="subscribe-button">Підписатися</button>
+        </form>
+      </div>
+    </footer>
+    <script src="modal.js"></script>
   </body>
 </html>
